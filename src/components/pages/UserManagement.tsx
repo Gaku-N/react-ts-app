@@ -1,5 +1,3 @@
 export const UserManagement = () => {
-  return (
-    <p>このページはUserManagementです</p>
-  )
-}
+  return <p>このページはUserManagementです</p>;
+};

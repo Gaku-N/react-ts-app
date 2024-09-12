@@ -1,5 +1,3 @@
 export const Home = () => {
-  return (
-    <p>このページはHomeです</p>
-  )
-}
+  return <p>このページはHomeです</p>;
+};
