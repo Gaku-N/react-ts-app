@@ -5,9 +5,11 @@ import './App.css';
 import { Router } from './router/Router';
 import theme from './theme/Theme';
 import { HeaderLayout } from './components/template/HeaderLayout';
+import { UserContext, UserProvider } from './providers/UserProvider';
 
 function App() {
   return (
+    <UserProvider>
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <HeaderLayout>
@@ -15,6 +17,7 @@ function App() {
         </HeaderLayout>
       </BrowserRouter>
     </ChakraProvider>
+    </UserProvider>
   );
 }
 
