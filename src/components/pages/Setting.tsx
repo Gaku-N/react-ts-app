@@ -1,3 +1,3 @@
 export const Setting = () => {
-  return <p>このページはSettingです</p>;
+  return <div>このページはSettingです</div>;
 };

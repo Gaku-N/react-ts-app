@@ -27,7 +27,7 @@ export const Header: FC = memo(() => {
             as='h1'
             fontSize={{ base: 'md', md: 'lg' }}
           >
-            <Link to={'/'}>管理アプリ</Link>
+            <div>管理アプリ</div>
           </Heading>
         </Flex>
         <Flex

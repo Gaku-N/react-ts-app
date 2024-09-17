@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { UserContext } from "../../providers/UserProvider";
+import { LoginUserContext } from "../../providers/UserProvider";
 
 export const Home = () => {
-  const context = useContext(UserContext)
-  return <p>このページはHomeです</p>;
+  const {loginUser, setLoginUser} = useContext(LoginUserContext);
+  console.log ('loginuser', loginUser)
+  return <div>このページはHomeです</div>;
 };

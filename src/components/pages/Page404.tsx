@@ -1,3 +1,3 @@
 export const Page404 = () => {
-  return <p>404ページです</p>;
+  return <div>404ページです</div>;
 };
