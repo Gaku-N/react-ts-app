@@ -1,5 +1,5 @@
-import { Box } from '@chakra-ui/react';
 import { FC, memo, ReactNode } from 'react';
+import { Box } from '@chakra-ui/react';
 
 import { Header } from '../organisms/Header';
 

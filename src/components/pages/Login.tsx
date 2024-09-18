@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import {
   Box,
   Button,
@@ -8,10 +9,11 @@ import {
   Input,
   Stack,
 } from '@chakra-ui/react';
+
 import { PrimaryButton } from '../atoms/PrimaryButton';
 const dummy = () => {}; // TODO
 
-export const Login = () => {
+export const Login = memo(() => {
   return (
     <Flex
       alignItems='center'
@@ -44,4 +46,4 @@ export const Login = () => {
       </Box>
     </Flex>
   );
-};
+});

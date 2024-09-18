@@ -1,12 +1,19 @@
-import userEvent from '@testing-library/user-event';
-import {createContext, Dispatch, FC, ReactNode, SetStateAction, useState} from 'react';
-import { User } from '../types/user';
+import {
+  createContext,
+  Dispatch,
+  FC,
+  memo,
+  ReactNode,
+  SetStateAction,
+  useState,
+} from 'react';
 
+import { User } from '../types/user';
 
 type Props = {
   children: ReactNode;
-}
-type LoginUser = User & { isAdmin: boolean };
+};
+type LoginUser = User & { isLogin: boolean };
 
 type LoginUserContextType = {
   loginUser: LoginUser | null;
@@ -16,13 +23,18 @@ export const LoginUserContext = createContext<LoginUserContextType>(
   {} as LoginUserContextType
 );
 
-
-export const UserProvider: FC<Props> = (props) => {
-  const {children} = props;
-  const [loginUser, setLoginUser] = useState<LoginUser | null>({globalId:'01234567', name:'NAME', email:'aaa@hosiden.com', isAdmin: false});
+export const UserProvider: FC<Props> = memo((props) => {
+  const { children } = props;
+  const [loginUser, setLoginUser] = useState<LoginUser | null>({
+    globalId: '01234567',
+    name: 'NAME',
+    email: 'aaa@hosiden.com',
+    types: 'Admin',
+    isLogin: false,
+  });
   return (
     <LoginUserContext.Provider value={{ loginUser, setLoginUser }}>
       {children}
     </LoginUserContext.Provider>
-  )
-}
+  );
+});

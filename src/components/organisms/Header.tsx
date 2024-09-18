@@ -18,16 +18,16 @@ export const Header: FC = memo(() => {
       >
         <Flex
           align='center'
-          as='a'
+          as='div'
           mr={8}
-          _hover={{ cursor: 'pointer' }}
-          onClick={() => {}}
+          // _hover={{ cursor: 'pointer' }}
+          // onClick={() => {}}
         >
           <Heading
             as='h1'
             fontSize={{ base: 'md', md: 'lg' }}
           >
-            <div>管理アプリ</div>
+            <Link to={'/'}>管理アプリ</Link>
           </Heading>
         </Flex>
         <Flex

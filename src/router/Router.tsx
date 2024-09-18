@@ -5,7 +5,6 @@ import { Login } from '../components/pages/Login';
 import { Setting } from '../components/pages/Setting';
 import { UserManagement } from '../components/pages/UserManagement';
 import { Page404 } from '../components/pages/Page404';
-import { Header } from '../components/organisms/Header';
 export const Router = () => {
   return (
     <>
